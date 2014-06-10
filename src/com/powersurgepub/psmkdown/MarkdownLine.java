@@ -335,6 +335,14 @@ public class MarkdownLine {
     }
   }
   
+  public boolean isTableOfContentsHeading() {
+    String id = getID();
+    return (getHeadingLevel() > 0
+        &&  id.length() > 0
+        && (id.equals("table-of-contents")
+         || id.equals("contents")));
+  }
+  
   public String getID() {
     return makeID (line, first, last);
   }
