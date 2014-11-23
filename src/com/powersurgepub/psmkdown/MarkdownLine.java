@@ -218,9 +218,10 @@ public class MarkdownLine {
           }
           else
           if (getMetaKey().equalsIgnoreCase(MarkdownDoc.DATE)) {
-            StringDate strDate = new StringDate();
-            strDate.parse(getMetaData());
-            doc.setDate(strDate.getYMD());
+            // StringDate strDate = new StringDate();
+            // strDate.parse(getMetaData());
+            // doc.setDate(strDate.getYMD());
+            doc.setDate(getMetaData());
           }
         } // end if colon found
         else {
