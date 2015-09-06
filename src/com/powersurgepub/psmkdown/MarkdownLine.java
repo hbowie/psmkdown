@@ -341,7 +341,8 @@ public class MarkdownLine {
     return (getHeadingLevel() > 0
         &&  id.length() > 0
         && (id.equals("table-of-contents")
-         || id.equals("contents")));
+          || id.equals("contents")
+          || id.equals("toc")));
   }
   
   public String getID() {
