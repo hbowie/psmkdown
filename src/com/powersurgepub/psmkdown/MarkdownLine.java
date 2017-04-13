@@ -1,5 +1,5 @@
 /*
- * Copyright 2013 - 2013 Herb Bowie
+ * Copyright 2013 - 2017 Herb Bowie
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -340,7 +340,7 @@ public class MarkdownLine {
     String id = getID();
     return (getHeadingLevel() > 0
         &&  id.length() > 0
-        && (id.equals("table-of-contents")
+        && (id.endsWith("table-of-contents")
           || id.equals("contents")
           || id.equals("toc")));
   }
